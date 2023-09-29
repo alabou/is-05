@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Used to express the dynamic constraints on UDP receiver transport parameters. These constraints may be set and changed at run time. Every transport parameter must have an entry, even if it is only an empty object.",
+  "required": [
+    "source_ip",
+    "destination_port",
+    "enabled"
+  ],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^ext_[a-zA-Z0-9_]+$":{
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    }
+  },
+  "properties": {
+    "source_ip": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "multicast_ip": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "interface_ip": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "destination_port": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "fec_enabled": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "fec_destination_ip": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "fec_mode": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "fec1D_destination_port": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "fec2D_destination_port": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    },
+    "enabled": {
+      "$ref": "constraint-schema.json#/definitions/constraint"
+    }
+  }
+}

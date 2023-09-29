@@ -11,6 +11,14 @@
         "urn:x-nmos:transport:websocket",
         "urn:x-nmos:transport:mqtt"
       ]
+    },
+    {
+      "pattern": "^urn:x-nmos:transport:"
+    },
+    {
+      "not": {
+        "pattern": "^urn:x-nmos:"
+      }
     }
   ],
   "format": "uri"
